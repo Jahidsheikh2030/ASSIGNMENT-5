@@ -21,7 +21,7 @@
     <header>
         <!-- Navbar -->
         <section>
-            <div class="navbar bg-base-100 h-[100px] shadow-sm px-[61px]">
+            <div class="navbar bg-base-100 shadow-sm h-auto px-4 md:px-[61px] flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
 
 
                 <div class="flex-1">
@@ -76,7 +76,7 @@
                 <h1 class="text-white font-bold text-3xl font-hind">Emergency Service Directory</h1>
                 <br>
 
-                <p class="text-white font-semibold text-1xl ">Government Emergency Services at Your Fingertip – A
+                <p class="text-white text-center font-semibold text-1xl ">Government Emergency Services at Your Fingertip – A
                     Project by Government of the People’s Republic of Bangladesh</p>
             </div>
 
@@ -93,8 +93,9 @@
     <main>
 
         <!-- card& call history -->
-        <section class="bg-[#FFE3E2] h-full flex justify-between">
-            <div class="grid grid-cols-3 gap-4 p-5">
+        <section class="bg-[#FFE3E2] h-full flex flex-col md:flex-row justify-between">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-5">
+            
 
 
 
@@ -137,21 +138,101 @@
                 </div>
 
 
-                <div class="Card bg-white rounded-2xl p-6 max-w-sm h-[300px] w-full mx-auto shadow-md">
+                <div class="Card bg-white rounded-2xl p-6 max-w-sm h-[300px] w-full mx-auto shadow-md">     
                     <div class="flex justify-between mb-4">
-                        <img class="w-8 h-8" src="assets/emergency.png" alt="Emergency">
+                        <img class="w-8 h-8" src="assets/police.png" alt="Emergency">
                         <img id="cardsharp" class="heart w-6 h-6 cursor-pointer" src="assets/w-heart.png"
                             alt="Favorite">
                     </div>
 
                     <div class="mb-4">
-                        <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
-                        <p class="text-gray-600 text-lg">National Emergency</p>
+                        <p class="text-black font-bold text-2xl font-hind">Police Helpline Number</p>
+                        <p class="text-gray-600 text-lg">Police</p>
                     </div>
 
                     <div class="mb-4 flex items-center justify-between">
                         <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
-                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
+                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">Police</button>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <!-- Copy Button -->
+
+
+                        <button
+                            class="copybtn flex-1 flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-black h-10 rounded-lg transition-colors">
+                            <img class="w-3 h-3" src="assets/copy.png" alt="Copy"> Copy
+                        </button>
+
+
+
+
+                        <button
+                            class=" callbtn  flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-gray-200 text-black h-10 rounded-lg transition-colors">
+                            <img class="w-3 h-3" src="assets/telephone.png" alt="Call"> Call
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="Card bg-white rounded-2xl p-6 max-w-sm h-[300px] w-full mx-auto shadow-md">
+                    <div class="flex justify-between mb-4">
+                        <img class="w-8 h-8" src="assets/fire-service.png" alt="Emergency">
+                        <img id="cardsharp" class="heart w-6 h-6 cursor-pointer" src="assets/w-heart.png"
+                            alt="Favorite">
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-black font-bold text-2xl font-hind">Fire Service <br>Number</p>
+                        <p class="text-gray-600 text-lg">Fire Service</p>
+                    </div>
+
+                    <div class="mb-4 flex items-center justify-between">
+                        <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
+                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">Fire</button>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <!-- Copy Button -->
+
+
+                        <button
+                            class="copybtn flex-1 flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-black h-10 rounded-lg transition-colors">
+                            <img class="w-3 h-3" src="assets/copy.png" alt="Copy"> Copy
+                        </button>
+
+
+
+
+                        <button
+                            class=" callbtn  flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-gray-200 text-black h-10 rounded-lg transition-colors">
+                            <img class="w-3 h-3" src="assets/telephone.png" alt="Call"> Call
+                        </button>
+
+                    </div>
+
+                </div>
+
+                      
+
+                <div class="Card bg-white rounded-2xl p-6 max-w-sm h-[300px] w-full mx-auto shadow-md">
+                    <div class="flex justify-between mb-4">
+                        <img class="w-8 h-8" src="assets/ambulance.png" alt="Emergency">
+                        <img id="cardsharp" class="heart w-6 h-6 cursor-pointer" src="assets/w-heart.png"
+                            alt="Favorite">
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-black font-bold text-2xl font-hind">Ambulance Service</p>
+                        <p class="text-gray-600 text-lg">Ambulance</p>
+                    </div>
+
+                    <div class="mb-4 flex items-center justify-between">
+                        <h1 id="textToCopy" class="font-bold text-3xl">1994-999999</h1>
+                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">Health</button>
                     </div>
 
                     <div class="flex gap-2">
@@ -185,51 +266,13 @@
                     </div>
 
                     <div class="mb-4">
-                        <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
-                        <p class="text-gray-600 text-lg">National Emergency</p>
+                        <p class="text-black font-bold text-2xl font-hind">Women & Child Helpline</p>
+                        <p class="text-gray-600 text-lg">Women & Child Helpline</p>
                     </div>
 
                     <div class="mb-4 flex items-center justify-between">
-                        <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
-                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
-                    </div>
-
-                    <div class="flex gap-2">
-                        <!-- Copy Button -->
-
-
-                        <button
-                            class="copybtn flex-1 flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-black h-10 rounded-lg transition-colors">
-                            <img class="w-3 h-3" src="assets/copy.png" alt="Copy"> Copy
-                        </button>
-
-
-
-
-                        <button
-                            class=" callbtn  flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-gray-200 text-black h-10 rounded-lg transition-colors">
-                            <img class="w-3 h-3" src="assets/telephone.png" alt="Call"> Call
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <div class="Card bg-white rounded-2xl p-6 max-w-sm h-[300px] w-full mx-auto shadow-md">
-                    <div class="flex justify-between mb-4">
-                        <img class="w-8 h-8" src="assets/emergency.png" alt="Emergency">
-                        <img id="cardsharp" class="heart w-6 h-6 cursor-pointer" src="assets/w-heart.png"
-                            alt="Favorite">
-                    </div>
-
-                    <div class="mb-4">
-                        <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
-                        <p class="text-gray-600 text-lg">National Emergency</p>
-                    </div>
-
-                    <div class="mb-4 flex items-center justify-between">
-                        <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
-                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
+                        <h1 id="textToCopy" class="font-bold text-3xl">109</h1>
+                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">Help</button>
                     </div>
 
                     <div class="flex gap-2">
@@ -263,13 +306,13 @@
                     </div>
 
                     <div class="mb-4">
-                        <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
-                        <p class="text-gray-600 text-lg">National Emergency</p>
+                        <p class="text-black font-bold text-2xl font-hind">Anti-Corruption Helpline</p>
+                        <p class="text-gray-600 text-lg">Anti-Corruption Helpline</p>
                     </div>
 
                     <div class="mb-4 flex items-center justify-between">
-                        <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
-                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
+                        <h1 id="textToCopy" class="font-bold text-3xl">106</h1>
+                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">Govt</button>
                     </div>
 
                     <div class="flex gap-2">
@@ -279,47 +322,7 @@
                         <button
                             class="copybtn flex-1 flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-black h-10 rounded-lg transition-colors">
                             <img class="w-3 h-3" src="assets/copy.png" alt="Copy"> Copy
-                        </button>
-
-
-
-
-                        <button
-                            class=" callbtn  flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-gray-200 text-black h-10 rounded-lg transition-colors">
-                            <img class="w-3 h-3" src="assets/telephone.png" alt="Call"> Call
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="Card bg-white rounded-2xl p-6 max-w-sm h-[300px] w-full mx-auto shadow-md">
-                    <div class="flex justify-between mb-4">
-                        <img class="w-8 h-8" src="assets/emergency.png" alt="Emergency">
-                        <img id="cardsharp" class="heart w-6 h-6 cursor-pointer" src="assets/w-heart.png"
-                            alt="Favorite">
-                    </div>
-
-                    <div class="mb-4">
-                        <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
-                        <p class="text-gray-600 text-lg">National Emergency</p>
-                    </div>
-
-                    <div class="mb-4 flex items-center justify-between">
-                        <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
-                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
-                    </div>
-
-                    <div class="flex gap-2">
-                        <!-- Copy Button -->
-
-
-                        <button
-                            class="copybtn flex-1 flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-black h-10 rounded-lg transition-colors">
-                            <img class="w-3 h-3" src="assets/copy.png" alt="Copy"> Copy
-                        </button>
+                        </button> 
 
 
 
@@ -342,13 +345,13 @@
                     </div>
 
                     <div class="mb-4">
-                        <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
-                        <p class="text-gray-600 text-lg">National Emergency</p>
+                        <p class="text-black font-bold text-2xl font-hind">Electricity Helpline</p>
+                        <p class="text-gray-600 text-lg">Electricity Outage</p>
                     </div>
 
                     <div class="mb-4 flex items-center justify-between">
-                        <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
-                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
+                        <h1 id="textToCopy" class="font-bold text-3xl">16216</h1>
+                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">Electricity</button>
                     </div>
 
                     <div class="flex gap-2">
@@ -381,13 +384,13 @@
                     </div>
 
                     <div class="mb-4">
-                        <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
-                        <p class="text-gray-600 text-lg">National Emergency</p>
+                        <p class="text-black font-bold text-2xl font-hind">Brac Helpline</p>
+                        <p class="text-gray-600 text-lg">Brac </p>
                     </div>
 
                     <div class="mb-4 flex items-center justify-between">
-                        <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
-                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
+                        <h1 id="textToCopy" class="font-bold text-3xl">16445</h1>
+                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">NGO</button>
                     </div>
 
                     <div class="flex gap-2">
@@ -420,13 +423,13 @@
                     </div>
 
                     <div class="mb-4">
-                        <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
-                        <p class="text-gray-600 text-lg">National Emergency</p>
+                        <p class="text-black font-bold text-[18px] font-hind">Bangladesh Railway Helpline </p>
+                        <p class="text-gray-600 text-lg">Bangladesh Railway</p>
                     </div>
 
                     <div class="mb-4 flex items-center justify-between">
-                        <h1 id="textToCopy" class="font-bold text-3xl">999</h1>
-                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
+                        <h1 id="textToCopy" class="font-bold text-3xl">163</h1>
+                        <button class="bg-gray-200 text-black px-4 py-2 rounded-full">Travel</button>
                     </div>
 
                     <div class="flex gap-2">
@@ -479,7 +482,8 @@
                     <button id="Clearbtn" class="bg-[#00A63E] hover:bg-green-400 px-4 py-2 rounded-full text-black flex items-center justify-center">
                         Clear
                     </button>
-                </div>
+                </div> 
+
                 <div id="callHistory">
 
                 </div>
