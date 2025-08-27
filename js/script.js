@@ -82,18 +82,11 @@ callbtns.forEach((btn) => {
 
 
 
-// const copybtn = document.querySelectorAll(".copybtn");
-// const copycoinEl = document.getElementById("copycoin");
-// let copyCount = parseInt(copycoinEl.innerText);
 
-// copybtn.forEach((heart) => {
-  
 
-//   heart.addEventListener("click", () => {
-//     copyCount++;
-//     copycoinEl.innerText = copyCount;
-//   });
-// });
+
+
+
 
 const copybtn = document.querySelectorAll(".copybtn");
 const copycoinEl = document.getElementById("copycoin");
@@ -119,5 +112,16 @@ copybtn.forEach((btn) => {
   });
 });
 
+
+
+const Clearbtn = document.getElementById("Clearbtn");
+
+Clearbtn.addEventListener("click", () => {
+  const historyContainer = document.getElementById("callHistory");
+  
+  if (historyContainer) {
+    historyContainer.innerHTML = ""; 
+  }
+});
 
 
