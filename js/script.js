@@ -26,17 +26,98 @@ hearts.forEach((heart) => {
 //     - Service number
 
 
-const callbtn = document.querySelectorAll(".callbtn");
+const callbtns = document.querySelectorAll(".callbtn");
 const countcoinEl = document.getElementById("countcoin");
 let coinCount = parseInt(countcoinEl.innerText);
 
-callbtn.forEach((heart) => {
-  
+callbtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (coinCount < 20) {
+      alert("Insufficient balance!");
+      return;
+    }
 
-  heart.addEventListener("click", () => {
-    coinCount++;
+    coinCount -= 20;
     countcoinEl.innerText = coinCount;
+
+    const parentBox = btn.closest(".Card");
+    const pTags = parentBox.querySelectorAll("p");
+
+    const firstText = pTags[0]?.innerText || "N/A";
+    const secondText = pTags[1]?.innerText || "N/A";
+
+    alert(`Calling:\n${firstText}\n${secondText}`);
+
+    
+    const historyContainer = document.getElementById("callHistory");
+
+    if (!historyContainer) {
+      console.error("Call history container not found.");
+      return;
+    }
+
+    const time = new Date().toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+
+    const entry = document.createElement("div");
+    entry.className = "border-t pt-2 text-sm";
+
+    entry.innerHTML = `
+  <div class="flex justify-between items-start">
+    <div>
+      <p class="font-semibold">${firstText}</p>
+      <p class="text-gray-600">${secondText}</p>
+    </div>
+    <p class="text-xs text-gray-400 whitespace-nowrap">${time}</p>
+  </div>
+`;
+
+
+    historyContainer.appendChild(entry); 
   });
 });
+
+
+
+
+// const copybtn = document.querySelectorAll(".copybtn");
+// const copycoinEl = document.getElementById("copycoin");
+// let copyCount = parseInt(copycoinEl.innerText);
+
+// copybtn.forEach((heart) => {
+  
+
+//   heart.addEventListener("click", () => {
+//     copyCount++;
+//     copycoinEl.innerText = copyCount;
+//   });
+// });
+
+const copybtn = document.querySelectorAll(".copybtn");
+const copycoinEl = document.getElementById("copycoin");
+let copyCount = parseInt(copycoinEl.innerText);
+
+copybtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    
+    const textToCopy = document.getElementById("textToCopy").innerText;
+
+    
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      
+      alert("Copied to clipboard: " + textToCopy);
+
+      
+      copyCount++;
+      copycoinEl.innerText = copyCount;
+    }).catch((err) => {
+      console.error("Failed to copy: ", err);
+      alert("Copy failed!");
+    });
+  });
+});
+
 
 
