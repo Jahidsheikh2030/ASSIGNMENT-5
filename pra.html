@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card" data-service-name="Service A" data-service-number="12345">
+        <button class="callbtn flex-1 flex items-center justify-center gap-2 bg-green-600 text-white h-10 rounded-lg">
+            <img class="w-3 h-3" src="assets/telephone.png" alt="Call"> Call
+        </button>
+    </div>
+
+    <div class="card" data-service-name="Service B" data-service-number="67890">
+        <button class="callbtn flex-1 flex items-center justify-center gap-2 bg-green-600 text-white h-10 rounded-lg">
+            <img class="w-3 h-3" src="assets/telephone.png" alt="Call"> Call
+        </button>
+    </div>
+
+    <!-- Coin display -->
+    <div>Coins: <span id="countcoin">100</span></div>
+
+    <!-- Call History -->
+    <h3>Call History</h3>
+    <ul id="callHistory"></ul>
+
+
+    <script>
+        const callBtns = document.querySelectorAll(".callbtn");
+        const countCoinEl = document.getElementById("countcoin");
+        let coinCount = parseInt(countCoinEl.innerText);
+        const callHistoryEl = document.getElementById("callHistory");
+
+        callBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                if (coinCount < 20) {
+                    alert("Not enough coins to make a call!");
+                    return;
+                }
+
+                coinCount -= 20;
+                countCoinEl.innerText = coinCount;
+
+                const card = btn.closest(".card");
+                const serviceName = card.dataset.serviceName;
+                const serviceNumber = card.dataset.serviceNumber;
+
+                alert(`Calling ${serviceName} at ${serviceNumber}`);
+
+                const li = document.createElement("li");
+                li.innerText = `${serviceName} - ${serviceNumber}`;
+                callHistoryEl.appendChild(li);
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

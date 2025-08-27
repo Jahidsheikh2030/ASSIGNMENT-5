@@ -14,23 +14,166 @@
     <!-- css link -->
 
     <link rel="stylesheet" href="style/style.css">
-    
+
 </head>
 
 <body>
-     <header>
+    <header>
+        <!-- Navbar -->
+        <section>
+            <div class="navbar bg-base-100 h-[100px] shadow-sm px-[61px]">
 
 
-     </header>
-     <main>
+                <div class="flex-1">
+                    <div class="flex items-center h-[50px] w-[195px] space-x-2">
+                        <img src="assets/logo.png" alt="Logo" class="h-full">
+                        <p class="text-sm font-extrabold text-[#013223]">Emergency<br> service</p>
+                    </div>
+                </div>
 
 
-        
-     </main>
+                <div class="flex h-[52px] w-[397px] space-x-2">
+
+                    <button
+                        class="bg-[rgba(65,255,107,0.1)] rounded-full h-[50px] w-[123px] btn flex items-center justify-center space-x-1">
+                        <span id="heartcount">0</span>
+
+
+                        <div class="h-[23px] w-[23px] ">
+                            <img src="assets/heart.png" alt="">
+                        </div>
+                    </button>
+
+                    <button
+                        class="bg-[rgba(65,255,107,0.1)] h-[50px] w-[123px] btn flex items-center rounded-full justify-center space-x-1">
+                        <span id="countcoin">100</span>
+
+
+                        <div class="h-[23px] w-[23px]">
+                            <img src="assets/coin.png" alt="">
+                            </div">
+                    </button>
+
+                    <button
+                        class="btn bg-[#00A63E] h-[50px] w-[123px] flex items-center justify-center space-x-1 rounded-full">
+                        <span>0</span> Copy
+                    </button>
+
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- banner  -->
+        <section>
+
+            <div class="w-full h-[240px] bg-[#013223] flex  justify-center items-center flex-col">
+                <div class="w-[92px] h-[92px] p-2.5">
+                    <img src="assets/logo-dark.png" alt="">
+                </div>
+                <h1 class="text-white font-bold text-3xl font-hind">Emergency Service Directory</h1>
+                <br>
+
+                <p class="text-white font-semibold text-1xl ">Government Emergency Services at Your Fingertip – A
+                    Project by Government of the People’s Republic of Bangladesh</p>
+            </div>
+
+
+        </section>
 
 
 
 
+
+
+
+    </header>
+    <main>
+
+        <!-- card& call history -->
+        <section class="bg-[#FFE3E2] h-screen flex justify-between">
+
+            <div class="bg-white rounded-2xl p-6 max-w-sm h-[300px] w-full mx-auto shadow-md">
+                <div class="flex justify-between mb-4">
+                    <img class="w-8 h-8" src="assets/emergency.png" alt="Emergency">
+                    <img id="cardsharp" class="heart w-6 h-6 cursor-pointer" src="assets/w-heart.png" alt="Favorite">
+                </div>
+
+                <div class="mb-4">
+                    <p class="text-black font-bold text-2xl font-hind">National Emergency Number</p>
+                    <p class="text-gray-600 text-lg">National Emergency</p>
+                </div>
+
+                <div class="mb-4 flex items-center justify-between">
+                    <h1 class="font-bold text-3xl">999</h1>
+                    <button class="bg-gray-200 text-black px-4 py-2 rounded-full">All</button>
+                </div>
+
+                <div class="flex gap-2">
+                    <!-- Copy Button -->
+                    
+                    
+                        <button
+                        class="flex-1 flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-black h-10 rounded-lg transition-colors">
+                        <img class="w-3 h-3" src="assets/copy.png" alt="Copy"> Copy
+                    </button>
+                    
+
+                    <!-- Call Button (now gray hover like Copy) -->
+                    
+                        <button
+                            class=" callbtn  flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-gray-200 text-black h-10 rounded-lg transition-colors">
+                            <img class="w-3 h-3" src="assets/telephone.png" alt="Call"> Call
+                        </button>
+                    
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- call history -->
+            <div
+            id="callHistory" 
+                class="  border-2 border-amber-400 bg-white rounded-3xl h-[930px] w-[400px] p-6 m-4 ">
+
+                <div class="flex items-center justify-between bg-white shadow-sm rounded-2xl h-12 px-4 mb-4">
+
+                    <div class="flex items-center space-x-2">
+                        <img class="h-6 w-6" src="assets/clock.png" alt="Clock Icon">
+                        <p class="text-sm font-bold">Call History</p>
+                    </div>
+
+
+                    <button class="bg-[#00A63E] text-white px-4 py-2 rounded-full flex items-center justify-center">
+                        Clear
+                    </button>
+                </div>
+
+                <!-- Add additional content here -->
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
