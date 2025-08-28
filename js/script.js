@@ -39,30 +39,44 @@ callbtns.forEach((btn) => {
 
     coinCount -= 20;
     countcoinEl.innerText = coinCount;
+    
 
+    // find a p tag insidee a card 
     const parentBox = btn.closest(".Card");
     const pTags = parentBox.querySelectorAll("p");
+
+    // Optional Chaining
 
     const firstText = pTags[0]?.innerText || "N/A";
     const secondText = pTags[1]?.innerText || "N/A";
 
     alert(`Calling:\n${firstText}\n${secondText}`);
 
+    // find a call history card 
+
     
     const historyContainer = document.getElementById("callHistory");
+
+
+    //  error handel
 
     if (!historyContainer) {
       console.error("Call history container not found.");
       return;
     }
 
+    // timre code 
     const time = new Date().toLocaleTimeString([], {
       hour: '2-digit',
       minute: '2-digit',
     });
 
+    // div create and div size 
+
     const entry = document.createElement("div");
     entry.className = "border-t pt-2 text-sm";
+
+    // div stracture 
 
     entry.innerHTML = `
   <div class="flex justify-between items-start">
@@ -86,7 +100,7 @@ callbtns.forEach((btn) => {
 
 
 
-
+//  copy section 
 
 const copybtn = document.querySelectorAll(".copybtn");
 const copycoinEl = document.getElementById("copycoin");
@@ -94,33 +108,38 @@ let copyCount = parseInt(copycoinEl.innerText);
 
 copybtn.forEach((btn) => {
   btn.addEventListener("click", () => {
-    
-    const textToCopy = document.getElementById("textToCopy").innerText;
+
+    //  find a card 
+    const card = btn.closest(".Card");
+    if (!card) return;  // if not fount 
 
     
+    //  find a tag that i want to copy  
+    const textEl = card.querySelector("#textToCopy");
+    if (!textEl) return; // error handel 
+
+    const textToCopy = textEl.innerText;
+
     navigator.clipboard.writeText(textToCopy).then(() => {
-      
       alert("Copied to clipboard: " + textToCopy);
 
-      
       copyCount++;
       copycoinEl.innerText = copyCount;
-    }).catch((err) => {
-      console.error("Failed to copy: ", err);
-      alert("Copy failed!");
+    
     });
   });
 });
 
 
 
+// clean button 
 const Clearbtn = document.getElementById("Clearbtn");
 
 Clearbtn.addEventListener("click", () => {
   const historyContainer = document.getElementById("callHistory");
   
   if (historyContainer) {
-    historyContainer.innerHTML = ""; 
+    historyContainer.innerHTML = ""; // if ture box empty 
   }
 });
 
